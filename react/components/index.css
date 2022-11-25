@@ -1,0 +1,122 @@
+:root {
+  --link: white;
+  --color1: #ff5500;
+  --color1-bg: hsl(21, 100%, 90%);
+  --color2: #3d3d3d;
+  --warning: rgb(255, 244, 229);
+}
+
+.row_group_container {
+  box-sizing: border-box;
+  padding: 10px 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.link_group_container {
+  text-decoration: none;
+  color: var(--link)
+}
+
+.button_group_container {
+  background-color: var(--color1);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 0px;
+  cursor: pointer;
+  color: var(--link);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.button_group_container::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  content: '';
+  background-color: var(--color2);
+  transition: 200ms;
+  z-index: 2;
+}
+
+.span_group_container {
+  position: relative;
+  z-index: 3;
+}
+
+.button_group_container:hover::before {
+  left: 0px;
+}
+
+/*? Tabla de productos */
+
+.container_table {
+  width: 95%;
+  margin: auto;
+}
+
+.table {
+  display: block;
+  width: 100%;
+}
+
+.table_body,
+.table_header {
+  display: block;
+}
+
+.table_header_tr,
+.table_body_tr {
+  display: grid;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 10px 0px;
+  margin-bottom: 5px;
+}
+
+.table_header {
+  background-color: var(--color1-bg);
+}
+
+.table_header_th {
+  color: var(--color2);
+}
+
+.table_body_td,
+.table_header_td {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.table_body_image {
+  max-width: 80px;
+  transition: 100ms;
+}
+
+.table_body_image:hover {
+  transform: scale(2.5);
+  cursor: pointer;
+}
+
+.totalize_text_error_content {
+  width: 80%;
+  margin: 20px auto;
+  background-color: var(--warning);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.totalize_text_error {
+  margin: 0;
+  text-align: center;
+  color: rgb(102, 60, 0);
+}
