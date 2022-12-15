@@ -23,7 +23,7 @@ const ButtonGroup = () => {
         </a>
       </div>
       <div className={handles.col_group_container}>
-        <a href="/" className={handles.link_group_container}>
+        <a href="/checkout" className={handles.link_group_container}>
           <button className={handles.button_group_container}>
             <span className={handles.span_group_container}>ver carrito</span>
           </button>
